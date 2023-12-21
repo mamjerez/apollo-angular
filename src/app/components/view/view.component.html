@@ -1,0 +1,49 @@
+<!-- <section>
+    <section>
+        <ul style="list-style-type: none;">
+            <li>
+                <a routerLink="">To Home</a>
+            </li>
+        </ul>
+    </section>
+    <div *ngIf="loading else showData">
+      loading data
+    </div>
+    <ng-template #showData>
+        <h4 class="center">Countries</h4>  
+        <div *ngFor="let country of countries">
+            <p>{{ country.name }}</p>
+        </div>
+    </ng-template>
+</section> -->
+<div *ngIf="person">
+    <h3>Detalles de la Persona:</h3>
+    <p><strong>Nombre:</strong> {{ person.name }}</p>
+    <p><strong>Año de Nacimiento:</strong> {{ person.birthYear }}</p>
+    <p><strong>Mundo Natal:</strong> {{ person.homeworld.name }}</p>
+  
+    <h4>Películas:</h4>
+    <ul>
+      <li *ngFor="let film of person.filmConnection.films">
+        {{ film.title }}
+      </li>
+    </ul>
+
+    <h4>Naves:</h4>
+    <ul>
+      <li *ngFor="let starship of person.starshipConnection.starships">
+        {{ starship.name }}
+      </li>
+    </ul>
+
+    <h4>Vehiculos:</h4>
+    <ul>
+      <li *ngFor="let vehicle of person.vehicleConnection.vehicles">
+        {{ vehicle.name }}
+        Model: {{ vehicle.model }}
+
+      </li>
+    </ul>
+  </div>
+  
+

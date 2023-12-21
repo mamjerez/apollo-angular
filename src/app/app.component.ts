@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ViewComponent } from './components/view/view.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    ViewComponent
+  ]
 })
 export class AppComponent {
-  title = 'apollo-angular';
+  title = 'angular-standalone-graphql';
 }
