@@ -8,8 +8,12 @@ import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
 // const uri = 'https://beta.pokeapi.co/graphql/v1beta'; 
 // const uri = 'https://graphqlpokemon.favware.tech/v8'; 
 const uri = 'https://swapi-graphql.eskerda.vercel.app/'; 
-// const uri = 'https://supabase.com/dashboard/project/cswdadlxiubwdzvqzywc/api/graphiql'; 
+// const uri = 'https://cswdadlxiubwdzvqzywc.supabase.co'; 
 
+
+const supabaseUrl = 'https://cswdadlxiubwdzvqzywc.supabase.co';
+const supabaseKey =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzd2RhZGx4aXVid2R6dnF6eXdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDI2MTkxODAsImV4cCI6MjAxODE5NTE4MH0.m2uvFmJvUoNc2qLndRZT0WhpMARVk7D4L1QveHsoapQ';
 
 
 

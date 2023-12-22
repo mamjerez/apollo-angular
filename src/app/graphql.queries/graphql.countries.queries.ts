@@ -89,6 +89,24 @@ const GET_POKEMON = gql`
     }
   }
   `;
+
+
+  const GET_EMPLOYEES_ALL = gql`
+  {
+    employeesCollection {
+      edges {
+        node {
+          id
+          name
+          firstname
+          lastname
+        }
+      }
+    }
+    }
+  
+  
+`;
   
 
-export { GET_COUNTRIES, GET_COUNTRIES_all, GET_POKEMON, GET_COUNTRIES_ALL, GET_PERSON_BYID };
+export { GET_COUNTRIES, GET_COUNTRIES_all, GET_POKEMON, GET_COUNTRIES_ALL, GET_PERSON_BYID, GET_EMPLOYEES_ALL };

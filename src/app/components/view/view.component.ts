@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Apollo } from 'apollo-angular';
-import { GET_COUNTRIES, GET_COUNTRIES_ALL, GET_COUNTRIES_all,  GET_PERSON_BYID, GET_POKEMON } from '../../graphql.queries/graphql.countries.queries';
+import { GET_COUNTRIES, GET_COUNTRIES_ALL, GET_COUNTRIES_all,  GET_EMPLOYEES_ALL,  GET_PERSON_BYID, GET_POKEMON } from '../../graphql.queries/graphql.countries.queries';
 
 @Component({
   selector: 'app-view',
@@ -23,8 +23,31 @@ export class ViewComponent implements OnInit {
     // this.loadCountriesAll();
     // this.loadPokemon();
     this.loadPerson();
+    // this.loadEmployees();
 
 
+  }
+
+  loadEmployees() {
+    this.loading = true; // Indica que la carga ha comenzado
+  
+    this.apollo.watchQuery({
+      query: GET_EMPLOYEES_ALL
+    }).valueChanges.subscribe({
+      next: ({ data }: { data: any }) => {
+        this.person = data.person;
+        console.log(this.person);
+        
+        // Otras operaciones necesarias con 'this.person'
+      },
+      error: (error) => {
+        console.error('Error al cargar persona:', error);
+        // Manejo de errores
+      },
+      complete: () => {
+        this.loading = false; // Indica que la carga ha finalizado
+      }
+    });
   }
 
   loadPerson() {
