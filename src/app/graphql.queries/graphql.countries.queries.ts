@@ -107,6 +107,59 @@ const GET_POKEMON = gql`
   
   
 `;
+
+
+// query employeeRelations{
+//     employeesCollection(filter: {id: {eq: 1}}) {
+//       edges {
+//         node {
+//           id
+//           name
+//           firstname
+//           lastname
+//         }
+//       }
+//     }
+//     positionsCollection(filter: {id: {eq: 1}}) {
+//       edges {
+//         node {
+//           id
+//           position
+//         }
+//       }
+//     }
+//     positions_externalCollection(filter: {id: {eq: 1}}) {
+//       edges {
+//         node {
+//           id
+//           position
+//         }
+//       }
+//     }
+//     recordsCollection(filter: {id: {eq: 1}}) {
+//       edges {
+//         node {
+//           id
+//           name
+//         }
+//       }
+//     }
+//   }
+
+
+// query employees {
+//     employeesCollection {
+//       edges {
+//         node {
+//           id
+//           name
+//           firstname
+//           lastname
+//         }
+//       }
+//     }
+//   }
+
   
 
 export { GET_COUNTRIES, GET_COUNTRIES_all, GET_POKEMON, GET_COUNTRIES_ALL, GET_PERSON_BYID, GET_EMPLOYEES_ALL };
